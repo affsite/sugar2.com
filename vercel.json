@@ -1,0 +1,46 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "destination": "https://sugar2.com/$1",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sugar2.com"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://sugar2.com/$1",
+      "statusCode": 301,
+      "has": [
+        {
+          "type": "host",
+          "value": "sugar2com.vercel.app"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ]
+}
